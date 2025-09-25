@@ -3,8 +3,7 @@ const app = express();
 __path = process.cwd()
 const bodyParser = require("body-parser");
 const PORT = process.env.PORT || 8000;
-let server = require('./qr'),
-    code = require('./pair');
+let code = require('./pair');
 require('events').EventEmitter.defaultMaxListeners = 500;
 app.use('/qr', server);
 app.use('/code', code);
